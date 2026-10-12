@@ -1,57 +1,49 @@
 # Intikhab Azam
 
-> AI/ML engineer and systems architect from Pakistan, working remotely with US teams: voice AI agents, RAG and LLM evaluation, multi-tenant SaaS, and open-source developer tools.
+> AI/ML engineer and systems architect working remotely with US teams: production voice agents, multi-tenant platforms, RAG and LLM agents, automation and open-source developer tools.
 
-Intikhab Azam (انتخاب اعظم) builds production AI systems (voice agents on Vapi and Twilio, RAG and LLM agents evaluated by cost per correct answer, multi-tenant SaaS) and publishes open-source developer tools and research. Contact: https://x.com/AzamIntikhab · Code: https://github.com/intikhab49
+Contact: https://x.com/AzamIntikhab · Code: https://github.com/intikhab49 · Site: https://intikhab49.github.io/
 
-## Developer tools and CI checks
+## Client work (anonymized)
 
-- [fairfax](https://github.com/intikhab49/fairfax): Is it available in GCC High? Check a Microsoft 365 GCC, GCC High, DoD or Azure Government plan against Microsoft's own availability tables: 633 cited features, 57 endpoints, a wrong-cloud host scanner, MCP server and GitHub Action. Proof: On PyPI and the GitHub Marketplace. Re-checks all 33 Microsoft sources weekly and keeps a Wayback Machine copy of each; on 12 Oct 2026 it caught Microsoft rewording two rows on the Teams page. Links: Website https://intikhab49.github.io/fairfax/, PyPI https://pypi.org/project/fairfax/, GitHub Action https://github.com/marketplace/actions/fairfax-gov-cloud-check
-- [blueprint-runtime](https://github.com/intikhab49/blueprint-runtime): Test Make.com (Integromat) scenarios offline: run exported blueprints locally, replay real Make runs and catch broken mappings before you deploy. CLI test runner and blueprint validator for CI. 71 of 79 real Make runs reproduced exactly, 0 differ. Proof: On npm. 71 of 79 recorded real Make.com runs reproduced exactly, 0 differ; the other 8 are refused instead of guessed. Links: Website https://intikhab49.github.io/blueprint-runtime/, npm https://www.npmjs.com/package/blueprint-runtime
-- [pgvector-cpu-check](https://github.com/intikhab49/pgvector-cpu-check): Find out which CPU crashes your Postgres image before your users do. Runs it on 7 CPUs (2008 Intel to Raspberry Pi and Graviton2) and names the faulting instruction (SIGILL). GitHub Action. Proof: On the GitHub Marketplace. 13 popular Postgres images audited on 7 CPU models, 3 build bugs found. Links: Website https://intikhab49.github.io/pgvector-cpu-check/, GitHub Action https://github.com/marketplace/actions/pgvector-cpu-check
-- [diff-gate](https://github.com/intikhab49/diff-gate): Attackers register the packages LLMs invent. diff-gate reads your coding agent's git diff and fails on imports that resolve to nothing. Claude Code skill + GitHub Action, zero dependencies. Proof: On the GitHub Marketplace. Zero dependencies. Links: GitHub Action https://github.com/marketplace/actions/diff-gate
-- [lifeboat](https://github.com/intikhab49/lifeboat): Bitnami's PostgreSQL and PostgreSQL HA (repmgr) images rebuilt from upstream source: same paths, scripts, env vars and tags, drop-in for the Bitnami postgresql and postgresql-ha Helm charts. No Broadcom binaries, every source SHA-256 pinned, amd64 + arm64. Proof: On the GitHub Marketplace. Every upstream source SHA-256 pinned; amd64 and arm64 images. Links: GitHub Action https://github.com/marketplace/actions/postgresql-with-pgvector-and-postgis-lifeboat
-- [minio-from-source](https://github.com/intikhab49/minio-from-source): Free MinIO Docker image for 2026: MinIO server + mc built from source at pinned, commit-verified releases. Multi-arch (amd64, arm64), smoke-tested replacement for minio/minio and quay.io/minio. Unofficial. Proof: On the GitHub Marketplace. Multi-arch images on GHCR, built from commit-verified releases. Links: GitHub Action https://github.com/marketplace/actions/minio-from-source, Images https://github.com/intikhab49/minio-from-source/pkgs/container/minio-from-source
+- Three production voice agents on the phone lines (US mobility company, Voice AI): An inbound receptionist, an outbound caller and a payment-recovery agent on Vapi. Payment links and SMS go through a Cloudflare Worker to Stripe; returning callers are recognized by caller ID. Results: Every prompt change is tested with scripted call batteries before it is pushed (30 of 30 on one branching flow); Dev and production organizations kept separate, with a promote step between them.
+- A multi-tenant platform for sensitive personal data (Provider network, Multi-tenant SaaS): A NestJS and Prisma API on PostgreSQL with tenant isolation on every row, roles checked per endpoint, and a Next.js portal whose sessions stay in httpOnly cookies behind a backend-for-frontend. Results: 148 API endpoints across 26 areas, each with its roles documented; A Playwright end-to-end suite runs on every pull request; Built with a coordinated team of AI coding agents and a human developer, behind spec files and test gates.
+- Slack triage for someone in 200+ channels (Agency executive, AI automation): A triage system that reads the day’s Slack and files what matters as cards on a Notion board: a keyword matrix, a Notion schema and a triage prompt checked by hand on 11 of 11 test cases. Results: Runs on a daily schedule; No new access to the client’s systems: it works through the connectors they already had.
+- A company website with motion that means something (Billing-services company, Website): Designed and built the site on Cloudflare Pages with four motion systems, and built a contact form backend and a CMS for the team. Results: Live on Cloudflare Pages; Mobile spacing and overflow fixed across the whole site.
+- A lead engine past the Google Places limit (Sales team, Lead generation): A self-hosted engine that grid-searches an area, falls back to OpenStreetMap, finds websites and emails, removes duplicates and resumes after a stop. Results: Built for a client’s outbound sales team; An open-source version is on GitHub.
+- An AI receptionist for a dental practice (Dental practice, Voice AI): A voice receptionist on Vapi that greets callers, answers common questions and hands off to the team, set up as a working demo for the owner. Results: Tested on live phone calls before it was shown.
 
-## AI research and benchmarks
+## Open-source projects
 
-- [open-jev-typed-decision-engine](https://github.com/intikhab49/open-jev-typed-decision-engine): Open reproduction of TypeSafe Jev: a 150M typed decision engine (noul/choice/score in one non-autoregressive pass, calibrated confidence). 0.697 vs Jev's 0.727, 2.5x better calibrated, 4x faster, free. Trains on a Colab T4 in 30 min. Proof: 46 stars. Trains on a free Colab T4 in about 30 minutes; 0.697 accuracy vs TypeSafe Jev's 0.727, with the loss reported up front. Links: GitHub Action https://github.com/marketplace/actions/open-jev-typed-decisions
-- [rag-cost-curve](https://github.com/intikhab49/rag-cost-curve): What does agentic RAG actually cost? A measured cost-per-correct-answer benchmark of agentic RAG, iterative RAG, cross-encoder reranking and naive RAG on multi-hop QA (MuSiQue). Meters every LLM call. Proof: Agentic RAG scored +32.5 exact match over naive RAG and cost 2.5x more per correct answer.
-- [pdf-cpu-bench](https://github.com/intikhab49/pdf-cpu-bench): 9 PDF-to-Markdown parsers for RAG on a plain 4-core CPU: olmocr-bench score, seconds per page, peak RAM, install size. MinerU's CPU tier leads at 74.6%. Proof: Quality scored on 1,403 PDFs with the official olmocr-bench checker.
-- [whofetched](https://github.com/intikhab49/whofetched): Prove which AI fetched your page: secret canary links, a Cloudflare Worker log and published-IP checks. Tested on ChatGPT, Claude, Gemini, Grok, Perplexity and Copilot (Oct 2026). Proof: Every request log, prompt and result is in the repo, timestamped with OpenTimestamps.
-- [pushback](https://github.com/intikhab49/pushback): How often do you correct your coding agent, and on what kind of work? Measures it from your Claude Code transcripts, drafts CLAUDE.md rules from your recurring corrections, and exports them as preference pairs. Proof: On PyPI, with tests in CI. Links: PyPI https://pypi.org/project/pushback/
-- [edgeproof-crypto-trading-backtest](https://github.com/intikhab49/edgeproof-crypto-trading-backtest): Crypto trading strategy backtesting & ML validation: triple-barrier labels, purged k-fold CV, deflated Sharpe ratio and a positive control. LightGBM, LSTM/BiLSTM, Binance + MEXC perpetual futures data.
+- [fairfax](https://github.com/intikhab49/fairfax): Is it available in GCC High? Checks a Microsoft 365 GCC, GCC High or DoD and Azure Government plan against Microsoft’s own tables, and finds commercial endpoints in code. Proof: 633 features, every row cited · weekly re-check with Wayback copies. Website: https://intikhab49.github.io/fairfax/
+- [blueprint-runtime](https://github.com/intikhab49/blueprint-runtime): Test Make.com scenarios offline. Replays real Make runs locally so a broken mapping fails in CI, not in production. Proof: 71 of 79 real runs reproduced exactly, 0 differ. Website: https://intikhab49.github.io/blueprint-runtime/
+- [pgvector-cpu-check](https://github.com/intikhab49/pgvector-cpu-check): Which CPU crashes your Postgres image? Runs it on 7 CPU models and names the faulting instruction behind SIGILL. Proof: 13 popular images audited · 3 build bugs found. Website: https://intikhab49.github.io/pgvector-cpu-check/
+- [lifeboat](https://github.com/intikhab49/lifeboat): Bitnami’s PostgreSQL and PostgreSQL HA images, rebuilt from upstream source as drop-ins for the Bitnami Helm charts. Proof: every source SHA-256 pinned · amd64 and arm64.
+- [diff-gate](https://github.com/intikhab49/diff-gate): Fails a coding agent’s diff when an import resolves to nothing, before attackers register the name. Proof: Claude Code skill and GitHub Action · zero dependencies.
+- [minio-from-source](https://github.com/intikhab49/minio-from-source): A free MinIO server and mc image built from source at pinned, commit-verified releases, for amd64 and arm64. Proof: smoke-tested · on the GitHub Marketplace.
+- [pushback](https://github.com/intikhab49/pushback): How often do you correct your coding agent? Measures it from Claude Code transcripts and drafts CLAUDE.md rules. Proof: on PyPI · tests in CI. PyPI: https://pypi.org/project/pushback/
+- [Open Jev](https://github.com/intikhab49/open-jev-typed-decision-engine): An open 150M typed decision engine: label, choice and score in one pass, with calibrated confidence. Proof: 0.697 vs 0.727 accuracy · 2.5x better calibrated · 4x faster.
+- [rag-cost-curve](https://github.com/intikhab49/rag-cost-curve): What agentic RAG really costs: cost per correct answer for four RAG designs on multi-hop questions. Proof: +32.5 exact match at 2.5x the cost per correct answer.
+- [pdf-cpu-bench](https://github.com/intikhab49/pdf-cpu-bench): The best PDF-to-Markdown parser for RAG without a GPU: accuracy, seconds per page, peak RAM and install size. Proof: 9 parsers · 1,403 PDFs · MinerU CPU tier leads at 74.6%.
+- [whofetched](https://github.com/intikhab49/whofetched): Which AI actually read your page? Canary links and a Cloudflare Worker log, tested on six AI apps. Proof: every log in the repo, timestamped.
+- [EdgeProof](https://github.com/intikhab49/edgeproof-crypto-trading-backtest): Crypto strategy backtesting and ML validation: triple-barrier labels, purged k-fold CV, deflated Sharpe and a positive control. Proof: reports the honest result: no edge after fees.
+- [vapi-voice-agent-crm](https://github.com/intikhab49/vapi-voice-agent-crm): Call ops for AI voice agents: webhook ingestion, a predictive dialer, auto-redial and Stripe-verified conversions. Proof: Vapi · Twilio · Stripe · Express.
+- [local-business-lead-finder](https://github.com/intikhab49/local-business-lead-finder): Self-hosted lead generation past the Google Places 60-result cap, with an OpenStreetMap fallback and resumable runs. Proof: FastAPI · Streamlit · grid search · dedup.
+- [npi-lead-pipeline](https://github.com/intikhab49/npi-healthcare-lead-pipeline): Provider directory to practice websites to emails, resumable and scheduled on GitHub Actions, with zero paid APIs. Proof: runs on a schedule in GitHub Actions.
+- [ai-wealth-advisor](https://github.com/intikhab49/ai-wealth-advisor): A RAG and tool-calling financial assistant for portfolio risk: VaR, Sharpe, drawdown and diversification scoring. Proof: LangChain · ChromaDB memory · Flask.
+- [secureface](https://github.com/intikhab49/secureface-liveness-detection): Face recognition access control with head-pose liveness, rPPG pulse detection and vector matching. Proof: InsightFace · OpenCV · ChromaDB.
+- [cryptoaion](https://github.com/intikhab49/cryptoaion-price-prediction): A BiLSTM-with-attention price prediction API with WebSocket streaming and JWT auth. Proof: PyTorch · FastAPI · WebSockets.
 
-## AI apps and automation
+## Services
 
-- [vapi-voice-agent-crm](https://github.com/intikhab49/vapi-voice-agent-crm): CRM & call-ops backend for Vapi AI voice agents: webhook ingestion, predictive dialer, auto-redial, payment-verified conversions (Stripe + portal reconciliation), Twilio call status and analytics. Node.js, Express, SQLite/MySQL.
-- [local-business-lead-finder](https://github.com/intikhab49/local-business-lead-finder): Self-hosted lead generation engine: scrape local business leads (phone, website, e-mail) past the Google Places 60-result cap with grid search, free OpenStreetMap fallback, dedup, adaptive rate limiting & resumable runs. FastAPI + Streamlit.
-- [npi-healthcare-lead-pipeline](https://github.com/intikhab49/npi-healthcare-lead-pipeline): Healthcare lead generation from the NPI Registry: fetch providers via the NPPES API, find practice websites, extract e-mails. Resumable Python pipeline scheduled on GitHub Actions — zero paid APIs.
-- [ai-wealth-advisor](https://github.com/intikhab49/ai-wealth-advisor): AI financial advisor chatbot: RAG + tool-calling LLM agent for portfolio risk (VaR, Sharpe, drawdown), diversification scoring & investment strategy, with ChromaDB memory. Gemini, OpenRouter, LangChain, Flask, Microsoft Fabric.
-- [secureface-liveness-detection](https://github.com/intikhab49/secureface-liveness-detection): Face recognition access control with liveness detection & anti-spoofing: InsightFace ArcFace embeddings, head-pose challenge, rPPG pulse detection and ChromaDB vector matching in a Streamlit dashboard.
-- [cryptoaion-price-prediction](https://github.com/intikhab49/cryptoaion-price-prediction): Crypto price prediction API with a PyTorch BiLSTM + attention model: 30m/1h/4h/24h forecasts for BTC, ETH & altcoins, CoinGecko + Yahoo Finance data, WebSocket streaming and JWT auth. FastAPI.
-
-## Utilities and notes
-
-- [libncurses5-libaio1-ubuntu-deb](https://github.com/intikhab49/libncurses5-libaio1-ubuntu-deb): libaio1, libncurses5, libncurses5-dev & libtinfo5 .deb packages (amd64) — fix 'libncurses.so.5 / libtinfo.so.5 / libaio.so.1: cannot open shared object file' on newer Ubuntu.
-- [git-notes](https://github.com/intikhab49/git-notes): Working notes on git internals and GitHub Actions
-
-## Early projects (2023-2025)
-
-- [crypto-price-prediction-api](https://github.com/intikhab49/crypto-price-prediction-api) (archived early project): v1 of CryptoAion: FastAPI service forecasting Bitcoin, Ethereum & altcoin prices with a PyTorch BiLSTM + attention model, CoinGecko and Yahoo Finance data, plus BiLSTM and XGBoost research notebooks.
-- [kubernetes-flask-microservices](https://github.com/intikhab49/kubernetes-flask-microservices) (archived early project): Flask microservices on Kubernetes (Minikube + Flannel) and Docker Swarm: NGINX reverse proxy, PostgreSQL, logging service, Prometheus monitoring and NetworkPolicies — a hands-on DevOps project.
-- [kubernetes-flask-crud](https://github.com/intikhab49/kubernetes-flask-crud) (archived early project): Flask + PostgreSQL CRUD app deployed on Kubernetes (Minikube) behind an NGINX reverse proxy with NetworkPolicies, plus a Docker Swarm stack.
-- [flask-postgres-crud-dashboard](https://github.com/intikhab49/flask-postgres-crud-dashboard) (archived early project): Flask + PostgreSQL user management CRUD app with a Bootstrap dark UI, Chart.js dashboard and REST API — runs with Docker Compose.
-- [react-express-drizzle-crud](https://github.com/intikhab49/react-express-drizzle-crud) (archived early project): Full-stack TypeScript CRUD app: React + Vite, Express, Drizzle ORM, Neon Postgres, Passport session auth with scrypt hashing and a Postgres session store.
-- [devops-agency-website](https://github.com/intikhab49/devops-agency-website) (archived early project): DevOps & cloud services agency website: React + TypeScript landing page with Tailwind & shadcn/ui — services, pricing calculator, testimonials, blog, FAQ, live chat — and an Express contact/newsletter API.
-- [ubuntu-dev-tools-installer](https://github.com/intikhab49/ubuntu-dev-tools-installer) (archived early project): Interactive Bash script to install or update Python, VS Code, Docker, Jenkins and kubectl on Ubuntu — detects installed versions and asks before changing anything.
-- [cpp-queue-data-structure](https://github.com/intikhab49/cpp-queue-data-structure) (archived early project): Array-based FIFO queue in C++ with enqueue, dequeue, size and display — a data structures coursework exercise.
-
-## Project sites
-
-- [fairfax](https://intikhab49.github.io/fairfax/): has its own llms.txt at https://intikhab49.github.io/fairfax/llms.txt
-- [blueprint-runtime](https://intikhab49.github.io/blueprint-runtime/): has its own llms.txt at https://intikhab49.github.io/blueprint-runtime/llms.txt
+- AI voice agents: Vapi and Twilio receptionists and outbound callers, wired into CRMs, payments and SMS.
+- Multi-tenant SaaS architecture: Postgres row-level security, BFF auth, field-level encryption, event-driven jobs.
+- RAG and LLM agents: Knowledge-base chatbots with tool calling and memory, judged by cost per correct answer.
+- LLM evals and research: Calibration, benchmarks and backtests that report the losing numbers too.
+- Agentic coding setups: Claude Code skills, MCP servers and CI gates for AI-written code.
+- Automation and data pipelines: n8n, Cloudflare Workers, Slack and Notion, lead generation and enrichment.
+- Developer tools and CI checks: CLIs, GitHub Actions and MCP servers for gov clouds, Make.com, Postgres images and more.
 
 ## Optional
 
-- [Full project list with topics](https://intikhab49.github.io/llms-full.txt)
+- [Full profile, stack and every public repository](https://intikhab49.github.io/llms-full.txt)

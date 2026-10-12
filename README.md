@@ -1,5 +1,7 @@
 # intikhab49.github.io
 
-Personal site of Intikhab Azam: https://intikhab49.github.io/
+Portfolio of Intikhab Azam: https://intikhab49.github.io/
 
-`python build.py` regenerates `index.html`, `llms.txt`, `llms-full.txt`, `robots.txt` and `sitemap.xml` from the GitHub API, so project names, descriptions and topics always match the repositories. The art in `assets/` comes from the [profile README](https://github.com/intikhab49/intikhab49).
+- `content.py` holds every word on the page: client case studies (anonymized), projects, stack and services.
+- `site.css` and `site.js` are the look and the interactions (rotating headline, 3D knot, filters, search, stack tabs).
+- `python build.py` renders `index.html`, `llms.txt`, `llms-full.txt`, `robots.txt` and `sitemap.xml`, and lists any public repository not featured on the page under "Also on GitHub".
