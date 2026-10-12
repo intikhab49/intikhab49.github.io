@@ -31,6 +31,8 @@ Intikhab Azam (انتخاب اعظم) builds production AI systems (voice agents
 
 Is it available in GCC High? Check a Microsoft 365 GCC, GCC High, DoD or Azure Government plan against Microsoft's own availability tables: 633 cited features, 57 endpoints, a wrong-cloud host scanner, MCP server and GitHub Action.
 
+Proof: On PyPI and the GitHub Marketplace. Re-checks all 33 Microsoft sources weekly and keeps a Wayback Machine copy of each; on 12 Oct 2026 it caught Microsoft rewording two rows on the Teams page.
+
 - Repository: https://github.com/intikhab49/fairfax
 - Website: https://intikhab49.github.io/fairfax/
 - PyPI: https://pypi.org/project/fairfax/
@@ -42,6 +44,8 @@ Is it available in GCC High? Check a Microsoft 365 GCC, GCC High, DoD or Azure G
 
 Test Make.com (Integromat) scenarios offline: run exported blueprints locally, replay real Make runs and catch broken mappings before you deploy. CLI test runner and blueprint validator for CI. 71 of 79 real Make runs reproduced exactly, 0 differ.
 
+Proof: On npm. 71 of 79 recorded real Make.com runs reproduced exactly, 0 differ; the other 8 are refused instead of guessed.
+
 - Repository: https://github.com/intikhab49/blueprint-runtime
 - Website: https://intikhab49.github.io/blueprint-runtime/
 - npm: https://www.npmjs.com/package/blueprint-runtime
@@ -51,6 +55,8 @@ Test Make.com (Integromat) scenarios offline: run exported blueprints locally, r
 ### pgvector-cpu-check
 
 Find out which CPU crashes your Postgres image before your users do. Runs it on 7 CPUs (2008 Intel to Raspberry Pi and Graviton2) and names the faulting instruction (SIGILL). GitHub Action.
+
+Proof: On the GitHub Marketplace. 13 popular Postgres images audited on 7 CPU models, 3 build bugs found.
 
 - Repository: https://github.com/intikhab49/pgvector-cpu-check
 - Website: https://intikhab49.github.io/pgvector-cpu-check/
@@ -62,6 +68,8 @@ Find out which CPU crashes your Postgres image before your users do. Runs it on 
 
 Attackers register the packages LLMs invent. diff-gate reads your coding agent's git diff and fails on imports that resolve to nothing. Claude Code skill + GitHub Action, zero dependencies.
 
+Proof: On the GitHub Marketplace. Zero dependencies.
+
 - Repository: https://github.com/intikhab49/diff-gate
 - GitHub Action: https://github.com/marketplace/actions/diff-gate
 - Language: JavaScript
@@ -71,6 +79,8 @@ Attackers register the packages LLMs invent. diff-gate reads your coding agent's
 
 Bitnami's PostgreSQL and PostgreSQL HA (repmgr) images rebuilt from upstream source: same paths, scripts, env vars and tags, drop-in for the Bitnami postgresql and postgresql-ha Helm charts. No Broadcom binaries, every source SHA-256 pinned, amd64 + arm64.
 
+Proof: On the GitHub Marketplace. Every upstream source SHA-256 pinned; amd64 and arm64 images.
+
 - Repository: https://github.com/intikhab49/lifeboat
 - GitHub Action: https://github.com/marketplace/actions/postgresql-with-pgvector-and-postgis-lifeboat
 - Language: Shell
@@ -79,6 +89,8 @@ Bitnami's PostgreSQL and PostgreSQL HA (repmgr) images rebuilt from upstream sou
 ### minio-from-source
 
 Free MinIO Docker image for 2026: MinIO server + mc built from source at pinned, commit-verified releases. Multi-arch (amd64, arm64), smoke-tested replacement for minio/minio and quay.io/minio. Unofficial.
+
+Proof: On the GitHub Marketplace. Multi-arch images on GHCR, built from commit-verified releases.
 
 - Repository: https://github.com/intikhab49/minio-from-source
 - GitHub Action: https://github.com/marketplace/actions/minio-from-source
@@ -93,6 +105,8 @@ Free MinIO Docker image for 2026: MinIO server + mc built from source at pinned,
 
 Open reproduction of TypeSafe Jev: a 150M typed decision engine (noul/choice/score in one non-autoregressive pass, calibrated confidence). 0.697 vs Jev's 0.727, 2.5x better calibrated, 4x faster, free. Trains on a Colab T4 in 30 min.
 
+Proof: 46 stars. Trains on a free Colab T4 in about 30 minutes; 0.697 accuracy vs TypeSafe Jev's 0.727, with the loss reported up front.
+
 - Repository: https://github.com/intikhab49/open-jev-typed-decision-engine
 - GitHub Action: https://github.com/marketplace/actions/open-jev-typed-decisions
 - Language: Python
@@ -103,6 +117,8 @@ Open reproduction of TypeSafe Jev: a 150M typed decision engine (noul/choice/sco
 
 What does agentic RAG actually cost? A measured cost-per-correct-answer benchmark of agentic RAG, iterative RAG, cross-encoder reranking and naive RAG on multi-hop QA (MuSiQue). Meters every LLM call.
 
+Proof: Agentic RAG scored +32.5 exact match over naive RAG and cost 2.5x more per correct answer.
+
 - Repository: https://github.com/intikhab49/rag-cost-curve
 - Language: Python
 - Topics: agentic-ai, agentic-rag, anthropic, benchmark, claude, cross-encoder, information-retrieval, llm, llm-cost, llm-evaluation, multi-hop-qa, musique, python, question-answering, rag, reranking, retrieval-augmented-generation
@@ -110,6 +126,8 @@ What does agentic RAG actually cost? A measured cost-per-correct-answer benchmar
 ### pdf-cpu-bench
 
 9 PDF-to-Markdown parsers for RAG on a plain 4-core CPU: olmocr-bench score, seconds per page, peak RAM, install size. MinerU's CPU tier leads at 74.6%.
+
+Proof: Quality scored on 1,403 PDFs with the official olmocr-bench checker.
 
 - Repository: https://github.com/intikhab49/pdf-cpu-bench
 - Language: Python
@@ -119,6 +137,8 @@ What does agentic RAG actually cost? A measured cost-per-correct-answer benchmar
 
 Prove which AI fetched your page: secret canary links, a Cloudflare Worker log and published-IP checks. Tested on ChatGPT, Claude, Gemini, Grok, Perplexity and Copilot (Oct 2026).
 
+Proof: Every request log, prompt and result is in the repo, timestamped with OpenTimestamps.
+
 - Repository: https://github.com/intikhab49/whofetched
 - Language: JavaScript
 - Topics: ai-agents, ai-crawlers, ai-search, ai-seo, bot-detection, canary-tokens, chatgpt, claude, cloudflare, cloudflare-workers, gemini, grok, llm, llm-crawlers, osint, perplexity, robots-txt, user-agent, web-analytics, web-scraping
@@ -126,6 +146,8 @@ Prove which AI fetched your page: secret canary links, a Cloudflare Worker log a
 ### pushback
 
 How often do you correct your coding agent, and on what kind of work? Measures it from your Claude Code transcripts, drafts CLAUDE.md rules from your recurring corrections, and exports them as preference pairs.
+
+Proof: On PyPI, with tests in CI.
 
 - Repository: https://github.com/intikhab49/pushback
 - PyPI: https://pypi.org/project/pushback/
@@ -139,7 +161,7 @@ Crypto trading strategy backtesting & ML validation: triple-barrier labels, purg
 - Repository: https://github.com/intikhab49/edgeproof-crypto-trading-backtest
 - Language: Python
 - Topics: algorithmic-trading, backtesting, binance, bitcoin, crypto-trading-bot, cryptocurrency, deflated-sharpe-ratio, lightgbm, lstm, machine-learning, mexc, perpetual-futures, purged-cross-validation, python, quantitative-finance, trading-strategy, triple-barrier-method
-- Stars: 1
+- Stars: 2
 
 
 ## AI apps and automation
@@ -193,66 +215,8 @@ Crypto price prediction API with a PyTorch BiLSTM + attention model: 30m/1h/4h/2
 - Language: Jupyter Notebook
 - Topics: attention-mechanism, bilstm, bitcoin, coingecko-api, crypto-prediction, cryptocurrency, deep-learning, fastapi, lstm, machine-learning, price-prediction, python, pytorch, technical-analysis, time-series-forecasting, websocket, yfinance
 
-### crypto-price-prediction-api
 
-v1 of CryptoAion: FastAPI service forecasting Bitcoin, Ethereum & altcoin prices with a PyTorch BiLSTM + attention model, CoinGecko and Yahoo Finance data, plus BiLSTM and XGBoost research notebooks.
-
-- Repository: https://github.com/intikhab49/crypto-price-prediction-api
-- Language: Jupyter Notebook
-- Topics: bilstm, bitcoin, coingecko-api, cryptocurrency, deep-learning, fastapi, jupyter-notebook, lstm, machine-learning, price-prediction, python, pytorch, time-series-forecasting, xgboost, yfinance
-- Stars: 2
-
-
-## DevOps and full-stack
-
-### kubernetes-flask-microservices
-
-Flask microservices on Kubernetes (Minikube + Flannel) and Docker Swarm: NGINX reverse proxy, PostgreSQL, logging service, Prometheus monitoring and NetworkPolicies — a hands-on DevOps project.
-
-- Repository: https://github.com/intikhab49/kubernetes-flask-microservices
-- Language: Python
-- Topics: devops, docker, docker-swarm, flannel, flask, kubernetes, microservices, minikube, monitoring, network-policy, nginx, postgresql, prometheus, python, rest-api
-- Stars: 1
-
-### kubernetes-flask-crud
-
-Flask + PostgreSQL CRUD app deployed on Kubernetes (Minikube) behind an NGINX reverse proxy with NetworkPolicies, plus a Docker Swarm stack.
-
-- Repository: https://github.com/intikhab49/kubernetes-flask-crud
-- Language: Python
-- Topics: crud, devops, docker, docker-swarm, flask, gunicorn, kubernetes, minikube, network-policy, nginx, postgresql, python
-
-### flask-postgres-crud-dashboard
-
-Flask + PostgreSQL user management CRUD app with a Bootstrap dark UI, Chart.js dashboard and REST API — runs with Docker Compose.
-
-- Repository: https://github.com/intikhab49/flask-postgres-crud-dashboard
-- Language: Python
-- Topics: bootstrap, chartjs, crud, crud-application, dashboard, docker-compose, flask, postgresql, python, rest-api, sqlalchemy, user-management
-
-### react-express-drizzle-crud
-
-Full-stack TypeScript CRUD app: React + Vite, Express, Drizzle ORM, Neon Postgres, Passport session auth with scrypt hashing and a Postgres session store.
-
-- Repository: https://github.com/intikhab49/react-express-drizzle-crud
-- Language: TypeScript
-- Topics: authentication, crud, drizzle-orm, express, fullstack, neon, passport, postgresql, react, tailwindcss, tanstack-query, typescript, vite, zod
-
-### devops-agency-website
-
-DevOps & cloud services agency website: React + TypeScript landing page with Tailwind & shadcn/ui — services, pricing calculator, testimonials, blog, FAQ, live chat — and an Express contact/newsletter API.
-
-- Repository: https://github.com/intikhab49/devops-agency-website
-- Language: TypeScript
-- Topics: agency-website, devops, drizzle-orm, express, landing-page, react, shadcn-ui, tailwindcss, typescript, vite, website-template
-
-### ubuntu-dev-tools-installer
-
-Interactive Bash script to install or update Python, VS Code, Docker, Jenkins and kubectl on Ubuntu — detects installed versions and asks before changing anything.
-
-- Repository: https://github.com/intikhab49/ubuntu-dev-tools-installer
-- Language: Shell
-- Topics: automation, bash, bash-script, developer-tools, devops, docker, installer, jenkins, kubectl, linux, python, ubuntu, vscode
+## Utilities and notes
 
 ### libncurses5-libaio1-ubuntu-deb
 
@@ -269,7 +233,68 @@ Working notes on git internals and GitHub Actions
 - Repository: https://github.com/intikhab49/git-notes
 - Topics: devops, git, git-internals, github-actions, notes
 
-### cpp-queue-data-structure
+
+## Early projects (2023-2025)
+
+### crypto-price-prediction-api (archived early project)
+
+v1 of CryptoAion: FastAPI service forecasting Bitcoin, Ethereum & altcoin prices with a PyTorch BiLSTM + attention model, CoinGecko and Yahoo Finance data, plus BiLSTM and XGBoost research notebooks.
+
+- Repository: https://github.com/intikhab49/crypto-price-prediction-api
+- Language: Jupyter Notebook
+- Topics: bilstm, bitcoin, coingecko-api, cryptocurrency, deep-learning, fastapi, jupyter-notebook, lstm, machine-learning, price-prediction, python, pytorch, time-series-forecasting, xgboost, yfinance
+- Stars: 2
+
+### kubernetes-flask-microservices (archived early project)
+
+Flask microservices on Kubernetes (Minikube + Flannel) and Docker Swarm: NGINX reverse proxy, PostgreSQL, logging service, Prometheus monitoring and NetworkPolicies — a hands-on DevOps project.
+
+- Repository: https://github.com/intikhab49/kubernetes-flask-microservices
+- Language: Python
+- Topics: devops, docker, docker-swarm, flannel, flask, kubernetes, microservices, minikube, monitoring, network-policy, nginx, postgresql, prometheus, python, rest-api
+- Stars: 1
+
+### kubernetes-flask-crud (archived early project)
+
+Flask + PostgreSQL CRUD app deployed on Kubernetes (Minikube) behind an NGINX reverse proxy with NetworkPolicies, plus a Docker Swarm stack.
+
+- Repository: https://github.com/intikhab49/kubernetes-flask-crud
+- Language: Python
+- Topics: crud, devops, docker, docker-swarm, flask, gunicorn, kubernetes, minikube, network-policy, nginx, postgresql, python
+
+### flask-postgres-crud-dashboard (archived early project)
+
+Flask + PostgreSQL user management CRUD app with a Bootstrap dark UI, Chart.js dashboard and REST API — runs with Docker Compose.
+
+- Repository: https://github.com/intikhab49/flask-postgres-crud-dashboard
+- Language: Python
+- Topics: bootstrap, chartjs, crud, crud-application, dashboard, docker-compose, flask, postgresql, python, rest-api, sqlalchemy, user-management
+
+### react-express-drizzle-crud (archived early project)
+
+Full-stack TypeScript CRUD app: React + Vite, Express, Drizzle ORM, Neon Postgres, Passport session auth with scrypt hashing and a Postgres session store.
+
+- Repository: https://github.com/intikhab49/react-express-drizzle-crud
+- Language: TypeScript
+- Topics: authentication, crud, drizzle-orm, express, fullstack, neon, passport, postgresql, react, tailwindcss, tanstack-query, typescript, vite, zod
+
+### devops-agency-website (archived early project)
+
+DevOps & cloud services agency website: React + TypeScript landing page with Tailwind & shadcn/ui — services, pricing calculator, testimonials, blog, FAQ, live chat — and an Express contact/newsletter API.
+
+- Repository: https://github.com/intikhab49/devops-agency-website
+- Language: TypeScript
+- Topics: agency-website, devops, drizzle-orm, express, landing-page, react, shadcn-ui, tailwindcss, typescript, vite, website-template
+
+### ubuntu-dev-tools-installer (archived early project)
+
+Interactive Bash script to install or update Python, VS Code, Docker, Jenkins and kubectl on Ubuntu — detects installed versions and asks before changing anything.
+
+- Repository: https://github.com/intikhab49/ubuntu-dev-tools-installer
+- Language: Shell
+- Topics: automation, bash, bash-script, developer-tools, devops, docker, installer, jenkins, kubectl, linux, python, ubuntu, vscode
+
+### cpp-queue-data-structure (archived early project)
 
 Array-based FIFO queue in C++ with enqueue, dequeue, size and display — a data structures coursework exercise.
 

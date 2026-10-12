@@ -51,17 +51,38 @@ GROUPS = [
     ("AI apps and automation", "Voice agents, RAG assistants, lead pipelines and ML APIs.", [
         ("vapi-voice-agent-crm", []), ("local-business-lead-finder", []), ("npi-healthcare-lead-pipeline", []),
         ("ai-wealth-advisor", []), ("secureface-liveness-detection", []), ("cryptoaion-price-prediction", []),
-        ("crypto-price-prediction-api", []),
     ]),
-    ("DevOps and full-stack", "Kubernetes, Docker, Flask, React and the tools around them.", [
-        ("kubernetes-flask-microservices", []), ("kubernetes-flask-crud", []), ("flask-postgres-crud-dashboard", []),
-        ("react-express-drizzle-crud", []), ("devops-agency-website", []), ("ubuntu-dev-tools-installer", []),
-        ("libncurses5-libaio1-ubuntu-deb", []), ("git-notes", []), ("cpp-queue-data-structure", []),
+    ("Utilities and notes", "Small things that save someone an afternoon.", [
+        ("libncurses5-libaio1-ubuntu-deb", []), ("git-notes", []),
+    ]),
+    ("Early projects (2023-2025)", "Learning projects from before the work above, kept public and archived.", [
+        ("crypto-price-prediction-api", []), ("kubernetes-flask-microservices", []), ("kubernetes-flask-crud", []),
+        ("flask-postgres-crud-dashboard", []), ("react-express-drizzle-crud", []), ("devops-agency-website", []),
+        ("ubuntu-dev-tools-installer", []), ("cpp-queue-data-structure", []),
     ]),
 ]
 
+# One checkable fact per tool: a release, a listing, or a number from the repo's own results.
+PROOF = {
+    "fairfax": "On PyPI and the GitHub Marketplace. Re-checks all 33 Microsoft sources weekly and keeps a Wayback "
+               "Machine copy of each; on 12 Oct 2026 it caught Microsoft rewording two rows on the Teams page.",
+    "blueprint-runtime": "On npm. 71 of 79 recorded real Make.com runs reproduced exactly, 0 differ; the other 8 are "
+                         "refused instead of guessed.",
+    "pgvector-cpu-check": "On the GitHub Marketplace. 13 popular Postgres images audited on 7 CPU models, 3 build "
+                          "bugs found.",
+    "diff-gate": "On the GitHub Marketplace. Zero dependencies.",
+    "lifeboat": "On the GitHub Marketplace. Every upstream source SHA-256 pinned; amd64 and arm64 images.",
+    "minio-from-source": "On the GitHub Marketplace. Multi-arch images on GHCR, built from commit-verified releases.",
+    "open-jev-typed-decision-engine": "46 stars. Trains on a free Colab T4 in about 30 minutes; 0.697 accuracy vs "
+                                      "TypeSafe Jev's 0.727, with the loss reported up front.",
+    "rag-cost-curve": "Agentic RAG scored +32.5 exact match over naive RAG and cost 2.5x more per correct answer.",
+    "pdf-cpu-bench": "Quality scored on 1,403 PDFs with the official olmocr-bench checker.",
+    "whofetched": "Every request log, prompt and result is in the repo, timestamped with OpenTimestamps.",
+    "pushback": "On PyPI, with tests in CI.",
+}
+
 # Public repos left off the page: an older duplicate of edgeproof-crypto-trading-backtest.
-SKIP = {USER, "crypto-15m-edge-research"}
+SKIP = {USER, f"{USER}.github.io", "crypto-15m-edge-research"}
 
 # Painted cards from the profile README (assets/cards), shown as a gallery.
 CARDS = [("open-jev-typed-decision-engine", "open-jev"), ("pushback", "pushback"), ("diff-gate", "diff-gate"),
@@ -111,7 +132,7 @@ def repos() -> dict:
                                  headers={"Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json"})
     with urllib.request.urlopen(req, timeout=60) as r:
         data = json.load(r)
-    return {d["name"]: d for d in data if not d["fork"] and not d["private"] and not d["archived"]}
+    return {d["name"]: d for d in data if not d["fork"] and not d["private"]}
 
 
 def e(s) -> str:
@@ -123,14 +144,20 @@ def card(repo, extra) -> str:
     links = [("GitHub", repo["html_url"])] + extra
     lang = f'<li class="lang">{e(repo["language"])}</li>' if repo.get("language") else ""
     tags = lang + "".join(f"<li>{e(t)}</li>" for t in repo.get("topics", [])[:6])
+    proof = f'<p class="proof">{e(PROOF[repo["name"]])}</p>' if repo["name"] in PROOF else ""
+    if repo.get("archived"):
+        stars += '<span class="arch">archived</span>'
     anchors = " · ".join(f'<a href="{e(u)}">{e(t)}</a>' for t, u in links)
     return (f'<article class="proj"><h3><a href="{e(repo["html_url"])}">{e(repo["name"])}</a>{stars}</h3>'
-            f'<p>{e(repo["description"] or "")}</p><ul class="tags">{tags}</ul><p class="links">{anchors}</p></article>')
+            f'<p>{e(repo["description"] or "")}</p>{proof}<ul class="tags">{tags}</ul><p class="links">{anchors}</p></article>')
 
 
 def main():
     data = repos()
-    listed = {name for _, _, items in GROUPS for name, _ in items}
+    names = [name for _, _, items in GROUPS for name, _ in items]
+    if len(names) != len(set(names)):
+        raise SystemExit(f"repo listed twice: {sorted({n for n in names if names.count(n) > 1})}")
+    listed = set(names)
     missing = sorted(n for n in data if n not in listed and n not in SKIP)
     if missing:
         raise SystemExit(f"public repos not placed in a group: {', '.join(missing)}")
@@ -146,8 +173,11 @@ def main():
                 continue
             r = data[n]
             more = (" Links: " + ", ".join(f"{t} {u}" for t, u in extra)) if extra else ""
-            llms.append(f"- [{n}]({r['html_url']}): {r['description']}{more}")
-            full.append(f"### {n}\n\n{r['description']}\n\n- Repository: {r['html_url']}" +
+            tag = " (archived early project)" if r.get("archived") else ""
+            fact = f" Proof: {PROOF[n]}" if n in PROOF else ""
+            llms.append(f"- [{n}]({r['html_url']}){tag}: {r['description']}{fact}{more}")
+            full.append(f"### {n}{tag}\n\n{r['description']}\n\n" + (f"Proof: {PROOF[n]}\n\n" if n in PROOF else "") +
+                        f"- Repository: {r['html_url']}" +
                         "".join(f"\n- {t}: {u}" for t, u in extra) +
                         (f"\n- Language: {r['language']}" if r.get("language") else "") +
                         (f"\n- Topics: {', '.join(r.get('topics', []))}" if r.get("topics") else "") +
@@ -230,6 +260,9 @@ ul.plain{{padding-left:20px}} ul.plain li{{margin:6px 0}} b{{color:var(--paper)}
 .tags{{display:flex;flex-wrap:wrap;gap:6px;list-style:none;padding:0;margin:0 0 8px}}
 .tags li{{font-size:12px;background:#241e40;border-radius:4px;padding:1px 7px;color:var(--muted)}} .tags li.lang{{color:var(--saffron)}}
 .links{{font-size:14px;font-weight:600}}
+.proof{{border-left:3px solid var(--green);padding-left:8px;color:var(--paper);font-size:14px!important}}
+.arch{{float:right;margin-right:8px;font-size:12px;color:var(--muted);border:1px solid #3a3360;border-radius:4px;padding:0 6px}}
+.group:nth-of-type(6) .proj{{border-top-color:#3a3360;opacity:.85}}
 .gallery{{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}}
 .gallery img{{display:block;width:100%;height:auto;border-radius:8px}}
 footer{{margin:60px 0 0;padding:24px 0 40px;border-top:2px solid #2c2550;color:var(--muted);font-size:14px}}
@@ -250,7 +283,7 @@ footer{{margin:60px 0 0;padding:24px 0 40px;border-top:2px solid #2c2550;color:v
 <ul class="plain">{li(BUILD)}</ul>
 
 <h2 id="projects">Open-source projects</h2>
-<p>{tools} public repositories, grouped by what they are for. Descriptions come straight from each repository.</p>
+<p>{tools} public repositories, grouped by what they are for, newest work first. Descriptions come straight from each repository; the green line under a tool is something you can check.</p>
 {"".join(groups_html)}
 
 <h2 id="gallery">From the truck</h2>
