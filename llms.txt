@@ -1,0 +1,54 @@
+# Intikhab Azam
+
+> AI/ML engineer and systems architect from Pakistan, working remotely with US teams: voice AI agents, RAG and LLM evaluation, multi-tenant SaaS, and open-source developer tools.
+
+Intikhab Azam (انتخاب اعظم) builds production AI systems (voice agents on Vapi and Twilio, RAG and LLM agents evaluated by cost per correct answer, multi-tenant SaaS) and publishes open-source developer tools and research. Contact: https://x.com/AzamIntikhab · Code: https://github.com/intikhab49
+
+## Developer tools and CI checks
+
+- [fairfax](https://github.com/intikhab49/fairfax): Is it available in GCC High? Check a Microsoft 365 GCC, GCC High, DoD or Azure Government plan against Microsoft's own availability tables: 633 cited features, 57 endpoints, a wrong-cloud host scanner, MCP server and GitHub Action. Links: Website https://intikhab49.github.io/fairfax/, PyPI https://pypi.org/project/fairfax/, GitHub Action https://github.com/marketplace/actions/fairfax-gov-cloud-check
+- [blueprint-runtime](https://github.com/intikhab49/blueprint-runtime): Test Make.com (Integromat) scenarios offline: run exported blueprints locally, replay real Make runs and catch broken mappings before you deploy. CLI test runner and blueprint validator for CI. 71 of 79 real Make runs reproduced exactly, 0 differ. Links: Website https://intikhab49.github.io/blueprint-runtime/, npm https://www.npmjs.com/package/blueprint-runtime
+- [pgvector-cpu-check](https://github.com/intikhab49/pgvector-cpu-check): Find out which CPU crashes your Postgres image before your users do. Runs it on 7 CPUs (2008 Intel to Raspberry Pi and Graviton2) and names the faulting instruction (SIGILL). GitHub Action. Links: Website https://intikhab49.github.io/pgvector-cpu-check/, GitHub Action https://github.com/marketplace/actions/pgvector-cpu-check
+- [diff-gate](https://github.com/intikhab49/diff-gate): Attackers register the packages LLMs invent. diff-gate reads your coding agent's git diff and fails on imports that resolve to nothing. Claude Code skill + GitHub Action, zero dependencies. Links: GitHub Action https://github.com/marketplace/actions/diff-gate
+- [lifeboat](https://github.com/intikhab49/lifeboat): Bitnami's PostgreSQL and PostgreSQL HA (repmgr) images rebuilt from upstream source: same paths, scripts, env vars and tags, drop-in for the Bitnami postgresql and postgresql-ha Helm charts. No Broadcom binaries, every source SHA-256 pinned, amd64 + arm64. Links: GitHub Action https://github.com/marketplace/actions/postgresql-with-pgvector-and-postgis-lifeboat
+- [minio-from-source](https://github.com/intikhab49/minio-from-source): Free MinIO Docker image for 2026: MinIO server + mc built from source at pinned, commit-verified releases. Multi-arch (amd64, arm64), smoke-tested replacement for minio/minio and quay.io/minio. Unofficial. Links: GitHub Action https://github.com/marketplace/actions/minio-from-source, Images https://github.com/intikhab49/minio-from-source/pkgs/container/minio-from-source
+
+## AI research and benchmarks
+
+- [open-jev-typed-decision-engine](https://github.com/intikhab49/open-jev-typed-decision-engine): Open reproduction of TypeSafe Jev: a 150M typed decision engine (noul/choice/score in one non-autoregressive pass, calibrated confidence). 0.697 vs Jev's 0.727, 2.5x better calibrated, 4x faster, free. Trains on a Colab T4 in 30 min. Links: GitHub Action https://github.com/marketplace/actions/open-jev-typed-decisions
+- [rag-cost-curve](https://github.com/intikhab49/rag-cost-curve): What does agentic RAG actually cost? A measured cost-per-correct-answer benchmark of agentic RAG, iterative RAG, cross-encoder reranking and naive RAG on multi-hop QA (MuSiQue). Meters every LLM call.
+- [pdf-cpu-bench](https://github.com/intikhab49/pdf-cpu-bench): 9 PDF-to-Markdown parsers for RAG on a plain 4-core CPU: olmocr-bench score, seconds per page, peak RAM, install size. MinerU's CPU tier leads at 74.6%.
+- [whofetched](https://github.com/intikhab49/whofetched): Prove which AI fetched your page: secret canary links, a Cloudflare Worker log and published-IP checks. Tested on ChatGPT, Claude, Gemini, Grok, Perplexity and Copilot (Oct 2026).
+- [pushback](https://github.com/intikhab49/pushback): How often do you correct your coding agent, and on what kind of work? Measures it from your Claude Code transcripts, drafts CLAUDE.md rules from your recurring corrections, and exports them as preference pairs. Links: PyPI https://pypi.org/project/pushback/
+- [edgeproof-crypto-trading-backtest](https://github.com/intikhab49/edgeproof-crypto-trading-backtest): Crypto trading strategy backtesting & ML validation: triple-barrier labels, purged k-fold CV, deflated Sharpe ratio and a positive control. LightGBM, LSTM/BiLSTM, Binance + MEXC perpetual futures data.
+
+## AI apps and automation
+
+- [vapi-voice-agent-crm](https://github.com/intikhab49/vapi-voice-agent-crm): CRM & call-ops backend for Vapi AI voice agents: webhook ingestion, predictive dialer, auto-redial, payment-verified conversions (Stripe + portal reconciliation), Twilio call status and analytics. Node.js, Express, SQLite/MySQL.
+- [local-business-lead-finder](https://github.com/intikhab49/local-business-lead-finder): Self-hosted lead generation engine: scrape local business leads (phone, website, e-mail) past the Google Places 60-result cap with grid search, free OpenStreetMap fallback, dedup, adaptive rate limiting & resumable runs. FastAPI + Streamlit.
+- [npi-healthcare-lead-pipeline](https://github.com/intikhab49/npi-healthcare-lead-pipeline): Healthcare lead generation from the NPI Registry: fetch providers via the NPPES API, find practice websites, extract e-mails. Resumable Python pipeline scheduled on GitHub Actions — zero paid APIs.
+- [ai-wealth-advisor](https://github.com/intikhab49/ai-wealth-advisor): AI financial advisor chatbot: RAG + tool-calling LLM agent for portfolio risk (VaR, Sharpe, drawdown), diversification scoring & investment strategy, with ChromaDB memory. Gemini, OpenRouter, LangChain, Flask, Microsoft Fabric.
+- [secureface-liveness-detection](https://github.com/intikhab49/secureface-liveness-detection): Face recognition access control with liveness detection & anti-spoofing: InsightFace ArcFace embeddings, head-pose challenge, rPPG pulse detection and ChromaDB vector matching in a Streamlit dashboard.
+- [cryptoaion-price-prediction](https://github.com/intikhab49/cryptoaion-price-prediction): Crypto price prediction API with a PyTorch BiLSTM + attention model: 30m/1h/4h/24h forecasts for BTC, ETH & altcoins, CoinGecko + Yahoo Finance data, WebSocket streaming and JWT auth. FastAPI.
+- [crypto-price-prediction-api](https://github.com/intikhab49/crypto-price-prediction-api): v1 of CryptoAion: FastAPI service forecasting Bitcoin, Ethereum & altcoin prices with a PyTorch BiLSTM + attention model, CoinGecko and Yahoo Finance data, plus BiLSTM and XGBoost research notebooks.
+
+## DevOps and full-stack
+
+- [kubernetes-flask-microservices](https://github.com/intikhab49/kubernetes-flask-microservices): Flask microservices on Kubernetes (Minikube + Flannel) and Docker Swarm: NGINX reverse proxy, PostgreSQL, logging service, Prometheus monitoring and NetworkPolicies — a hands-on DevOps project.
+- [kubernetes-flask-crud](https://github.com/intikhab49/kubernetes-flask-crud): Flask + PostgreSQL CRUD app deployed on Kubernetes (Minikube) behind an NGINX reverse proxy with NetworkPolicies, plus a Docker Swarm stack.
+- [flask-postgres-crud-dashboard](https://github.com/intikhab49/flask-postgres-crud-dashboard): Flask + PostgreSQL user management CRUD app with a Bootstrap dark UI, Chart.js dashboard and REST API — runs with Docker Compose.
+- [react-express-drizzle-crud](https://github.com/intikhab49/react-express-drizzle-crud): Full-stack TypeScript CRUD app: React + Vite, Express, Drizzle ORM, Neon Postgres, Passport session auth with scrypt hashing and a Postgres session store.
+- [devops-agency-website](https://github.com/intikhab49/devops-agency-website): DevOps & cloud services agency website: React + TypeScript landing page with Tailwind & shadcn/ui — services, pricing calculator, testimonials, blog, FAQ, live chat — and an Express contact/newsletter API.
+- [ubuntu-dev-tools-installer](https://github.com/intikhab49/ubuntu-dev-tools-installer): Interactive Bash script to install or update Python, VS Code, Docker, Jenkins and kubectl on Ubuntu — detects installed versions and asks before changing anything.
+- [libncurses5-libaio1-ubuntu-deb](https://github.com/intikhab49/libncurses5-libaio1-ubuntu-deb): libaio1, libncurses5, libncurses5-dev & libtinfo5 .deb packages (amd64) — fix 'libncurses.so.5 / libtinfo.so.5 / libaio.so.1: cannot open shared object file' on newer Ubuntu.
+- [git-notes](https://github.com/intikhab49/git-notes): Working notes on git internals and GitHub Actions
+- [cpp-queue-data-structure](https://github.com/intikhab49/cpp-queue-data-structure): Array-based FIFO queue in C++ with enqueue, dequeue, size and display — a data structures coursework exercise.
+
+## Project sites
+
+- [fairfax](https://intikhab49.github.io/fairfax/): has its own llms.txt at https://intikhab49.github.io/fairfax/llms.txt
+- [blueprint-runtime](https://intikhab49.github.io/blueprint-runtime/): has its own llms.txt at https://intikhab49.github.io/blueprint-runtime/llms.txt
+
+## Optional
+
+- [Full project list with topics](https://intikhab49.github.io/llms-full.txt)

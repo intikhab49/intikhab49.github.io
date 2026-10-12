@@ -1,0 +1,278 @@
+# Intikhab Azam
+
+> AI/ML engineer and systems architect from Pakistan, working remotely with US teams: voice AI agents, RAG and LLM evaluation, multi-tenant SaaS, and open-source developer tools.
+
+Intikhab Azam (انتخاب اعظم) builds production AI systems (voice agents on Vapi and Twilio, RAG and LLM agents evaluated by cost per correct answer, multi-tenant SaaS) and publishes open-source developer tools and research. Contact: https://x.com/AzamIntikhab · Code: https://github.com/intikhab49
+
+## What I build
+
+- AI voice agents: Vapi and Twilio receptionists and outbound callers, wired into CRMs, payments and SMS.
+- RAG and LLM agents: Knowledge-base chatbots with tool calling and memory, evaluated by cost per correct answer.
+- LLM evals and research: Calibration, benchmarks and backtests that report the losing numbers too.
+- Multi-tenant SaaS architecture: Postgres row-level security, BFF auth, field-level encryption, event-driven jobs.
+- Agentic coding: Claude Code, Codex and DeepSeek working in parallel behind spec files, a claims board and test gates.
+- Automation and data pipelines: n8n, Cloudflare Workers, lead generation, scraping and enrichment.
+- Developer tools and CI checks: CLIs, GitHub Actions and MCP servers on PyPI and npm, for Microsoft gov clouds (GCC High, Azure Government), Make.com, Postgres images and AI-written code.
+
+## Work with me
+
+- AI voice agents: receptionists, outbound callers, call-to-CRM and payment flows on Vapi and Twilio
+- RAG chatbots and LLM agents: knowledge bases, tool calling, memory and evaluation
+- LLM cost and quality: benchmarks, calibration, prompt caching and model routing
+- System architecture: multi-tenant SaaS design, auth and data security, scaling and cost reviews
+- Agentic coding setups: Claude Code skills, MCP servers and CI gates for AI-written code
+- Automation: n8n workflows, lead generation, scraping, CRM and payment integrations
+- Microsoft gov cloud: GCC, GCC High and Azure Government feature, endpoint and sign-in checks before you build
+- Make.com and no-code QA: regression tests for Make scenarios that run offline and in CI
+
+## Developer tools and CI checks
+
+### fairfax
+
+Is it available in GCC High? Check a Microsoft 365 GCC, GCC High, DoD or Azure Government plan against Microsoft's own availability tables: 633 cited features, 57 endpoints, a wrong-cloud host scanner, MCP server and GitHub Action.
+
+- Repository: https://github.com/intikhab49/fairfax
+- Website: https://intikhab49.github.io/fairfax/
+- PyPI: https://pypi.org/project/fairfax/
+- GitHub Action: https://github.com/marketplace/actions/fairfax-gov-cloud-check
+- Language: Python
+- Topics: azure, azure-government, azure-openai, cli, cloud-parity, dataset, defender-for-cloud, dod, entra-id, feature-availability, fedramp, gcc, gcc-high, government-cloud, linter, microsoft-365, microsoft-sentinel, power-automate, power-platform, python
+
+### blueprint-runtime
+
+Test Make.com (Integromat) scenarios offline: run exported blueprints locally, replay real Make runs and catch broken mappings before you deploy. CLI test runner and blueprint validator for CI. 71 of 79 real Make runs reproduced exactly, 0 differ.
+
+- Repository: https://github.com/intikhab49/blueprint-runtime
+- Website: https://intikhab49.github.io/blueprint-runtime/
+- npm: https://www.npmjs.com/package/blueprint-runtime
+- Language: TypeScript
+- Topics: automation, ci, cli, github-actions, integromat, linter, low-code, make, make-blueprint, make-com, make-scenario, makecom, no-code, regression-testing, snapshot-testing, test-runner, testing, typescript, validator, workflow-automation
+
+### pgvector-cpu-check
+
+Find out which CPU crashes your Postgres image before your users do. Runs it on 7 CPUs (2008 Intel to Raspberry Pi and Graviton2) and names the faulting instruction (SIGILL). GitHub Action.
+
+- Repository: https://github.com/intikhab49/pgvector-cpu-check
+- Website: https://intikhab49.github.io/pgvector-cpu-check/
+- GitHub Action: https://github.com/marketplace/actions/pgvector-cpu-check
+- Language: Python
+- Topics: arm64, avx2, avx512, binary-analysis, cpu-compatibility, docker, docker-image, github-actions, graviton, illegal-instruction, pgvector, pgvectorscale, postgres, postgresql, qemu, rag, raspberry-pi, reverse-engineering, sigill, vector-database
+
+### diff-gate
+
+Attackers register the packages LLMs invent. diff-gate reads your coding agent's git diff and fails on imports that resolve to nothing. Claude Code skill + GitHub Action, zero dependencies.
+
+- Repository: https://github.com/intikhab49/diff-gate
+- GitHub Action: https://github.com/marketplace/actions/diff-gate
+- Language: JavaScript
+- Topics: agent-skills, ai, ai-agents, ai-coding-assistant, claude, claude-code, claude-skills, code-review, codex, cursor, developer-tools, github-actions, hallucination, llm, opencode, python, slopsquatting, static-analysis, supply-chain-security, typescript
+
+### lifeboat
+
+Bitnami's PostgreSQL and PostgreSQL HA (repmgr) images rebuilt from upstream source: same paths, scripts, env vars and tags, drop-in for the Bitnami postgresql and postgresql-ha Helm charts. No Broadcom binaries, every source SHA-256 pinned, amd64 + arm64.
+
+- Repository: https://github.com/intikhab49/lifeboat
+- GitHub Action: https://github.com/marketplace/actions/postgresql-with-pgvector-and-postgis-lifeboat
+- Language: Shell
+- Topics: bitnami, bitnami-alternative, bitnami-legacy, ci, containers, docker, docker-image, drop-in-replacement, ghcr, github-actions, helm, kubernetes, pgvector, postgis, postgres, postgresql, repmgr, reverse-engineering, sbom, supply-chain-security
+
+### minio-from-source
+
+Free MinIO Docker image for 2026: MinIO server + mc built from source at pinned, commit-verified releases. Multi-arch (amd64, arm64), smoke-tested replacement for minio/minio and quay.io/minio. Unofficial.
+
+- Repository: https://github.com/intikhab49/minio-from-source
+- GitHub Action: https://github.com/marketplace/actions/minio-from-source
+- Images: https://github.com/intikhab49/minio-from-source/pkgs/container/minio-from-source
+- Language: Shell
+- Topics: arm64, ci, container-image, devops, docker, docker-compose, docker-image, ghcr, github-actions, minio, minio-alternative, minio-docker, multi-arch, object-storage, reproducible-builds, s3, s3-compatible, self-hosted, storage, supply-chain-security
+
+
+## AI research and benchmarks
+
+### open-jev-typed-decision-engine
+
+Open reproduction of TypeSafe Jev: a 150M typed decision engine (noul/choice/score in one non-autoregressive pass, calibrated confidence). 0.697 vs Jev's 0.727, 2.5x better calibrated, 4x faster, free. Trains on a Colab T4 in 30 min.
+
+- Repository: https://github.com/intikhab49/open-jev-typed-decision-engine
+- GitHub Action: https://github.com/marketplace/actions/open-jev-typed-decisions
+- Language: Python
+- Topics: agent-observability, calibration, colab, decision-model, expected-calibration-error, huggingface, jev, llm-alternative, llm-routing, modernbert, non-autoregressive, onnx, pytorch, structured-outputs, text-classification, typed-decisions, typesafe-ai, zero-cost-inference
+- Stars: 46
+
+### rag-cost-curve
+
+What does agentic RAG actually cost? A measured cost-per-correct-answer benchmark of agentic RAG, iterative RAG, cross-encoder reranking and naive RAG on multi-hop QA (MuSiQue). Meters every LLM call.
+
+- Repository: https://github.com/intikhab49/rag-cost-curve
+- Language: Python
+- Topics: agentic-ai, agentic-rag, anthropic, benchmark, claude, cross-encoder, information-retrieval, llm, llm-cost, llm-evaluation, multi-hop-qa, musique, python, question-answering, rag, reranking, retrieval-augmented-generation
+
+### pdf-cpu-bench
+
+9 PDF-to-Markdown parsers for RAG on a plain 4-core CPU: olmocr-bench score, seconds per page, peak RAM, install size. MinerU's CPU tier leads at 74.6%.
+
+- Repository: https://github.com/intikhab49/pdf-cpu-bench
+- Language: Python
+- Topics: benchmark, benchmarks, cpu, docling, document-ai, document-parsing, llm, llm-ingestion, marker, markitdown, mineru, ocr, olmocr, olmocr-bench, pdf, pdf-extraction, pdf-parsing, pdf-to-markdown, python, rag
+
+### whofetched
+
+Prove which AI fetched your page: secret canary links, a Cloudflare Worker log and published-IP checks. Tested on ChatGPT, Claude, Gemini, Grok, Perplexity and Copilot (Oct 2026).
+
+- Repository: https://github.com/intikhab49/whofetched
+- Language: JavaScript
+- Topics: ai-agents, ai-crawlers, ai-search, ai-seo, bot-detection, canary-tokens, chatgpt, claude, cloudflare, cloudflare-workers, gemini, grok, llm, llm-crawlers, osint, perplexity, robots-txt, user-agent, web-analytics, web-scraping
+
+### pushback
+
+How often do you correct your coding agent, and on what kind of work? Measures it from your Claude Code transcripts, drafts CLAUDE.md rules from your recurring corrections, and exports them as preference pairs.
+
+- Repository: https://github.com/intikhab49/pushback
+- PyPI: https://pypi.org/project/pushback/
+- Language: Python
+- Topics: agent-analytics, ai-agents, anthropic, claude, claude-code, claude-md, cli, coding-agents, developer-tools, dpo, human-feedback, llm, llm-evaluation, preference-data, prompt-engineering, python
+
+### edgeproof-crypto-trading-backtest
+
+Crypto trading strategy backtesting & ML validation: triple-barrier labels, purged k-fold CV, deflated Sharpe ratio and a positive control. LightGBM, LSTM/BiLSTM, Binance + MEXC perpetual futures data.
+
+- Repository: https://github.com/intikhab49/edgeproof-crypto-trading-backtest
+- Language: Python
+- Topics: algorithmic-trading, backtesting, binance, bitcoin, crypto-trading-bot, cryptocurrency, deflated-sharpe-ratio, lightgbm, lstm, machine-learning, mexc, perpetual-futures, purged-cross-validation, python, quantitative-finance, trading-strategy, triple-barrier-method
+- Stars: 1
+
+
+## AI apps and automation
+
+### vapi-voice-agent-crm
+
+CRM & call-ops backend for Vapi AI voice agents: webhook ingestion, predictive dialer, auto-redial, payment-verified conversions (Stripe + portal reconciliation), Twilio call status and analytics. Node.js, Express, SQLite/MySQL.
+
+- Repository: https://github.com/intikhab49/vapi-voice-agent-crm
+- Language: JavaScript
+- Topics: ai-receptionist, ai-voice-agent, call-center, conversational-ai, crm, express, llm, mysql, nodejs, predictive-dialer, sales-automation, sqlite, stripe, twilio, vapi, voice-ai, webhooks
+
+### local-business-lead-finder
+
+Self-hosted lead generation engine: scrape local business leads (phone, website, e-mail) past the Google Places 60-result cap with grid search, free OpenStreetMap fallback, dedup, adaptive rate limiting & resumable runs. FastAPI + Streamlit.
+
+- Repository: https://github.com/intikhab49/local-business-lead-finder
+- Language: Python
+- Topics: b2b-leads, email-finder, email-scraper, fastapi, google-maps-scraper, google-places-api, lead-generation, lead-scraper, local-business, openstreetmap, overpass-api, python, sales-prospecting, sqlalchemy, streamlit, web-scraping
+- Stars: 1
+
+### npi-healthcare-lead-pipeline
+
+Healthcare lead generation from the NPI Registry: fetch providers via the NPPES API, find practice websites, extract e-mails. Resumable Python pipeline scheduled on GitHub Actions — zero paid APIs.
+
+- Repository: https://github.com/intikhab49/npi-healthcare-lead-pipeline
+- Language: Python
+- Topics: automation, b2b-leads, beautifulsoup, data-pipeline, duckduckgo, email-scraper, github-actions, healthcare, lead-generation, mental-health, npi, nppes, python, sales-prospecting, web-scraping
+
+### ai-wealth-advisor
+
+AI financial advisor chatbot: RAG + tool-calling LLM agent for portfolio risk (VaR, Sharpe, drawdown), diversification scoring & investment strategy, with ChromaDB memory. Gemini, OpenRouter, LangChain, Flask, Microsoft Fabric.
+
+- Repository: https://github.com/intikhab49/ai-wealth-advisor
+- Language: Python
+- Topics: ai-agent, chatbot, chromadb, financial-analysis, fintech, flask, gemini, langchain, llm, microsoft-fabric, openrouter, portfolio-analysis, python, rag, risk-management, robo-advisor, tool-calling
+
+### secureface-liveness-detection
+
+Face recognition access control with liveness detection & anti-spoofing: InsightFace ArcFace embeddings, head-pose challenge, rPPG pulse detection and ChromaDB vector matching in a Streamlit dashboard.
+
+- Repository: https://github.com/intikhab49/secureface-liveness-detection
+- Language: Python
+- Topics: access-control, anti-spoofing, arcface, biometrics, chromadb, computer-vision, deep-learning, face-anti-spoofing, face-recognition, insightface, liveness-detection, mediapipe, onnxruntime, opencv, python, rppg, streamlit
+
+### cryptoaion-price-prediction
+
+Crypto price prediction API with a PyTorch BiLSTM + attention model: 30m/1h/4h/24h forecasts for BTC, ETH & altcoins, CoinGecko + Yahoo Finance data, WebSocket streaming and JWT auth. FastAPI.
+
+- Repository: https://github.com/intikhab49/cryptoaion-price-prediction
+- Language: Jupyter Notebook
+- Topics: attention-mechanism, bilstm, bitcoin, coingecko-api, crypto-prediction, cryptocurrency, deep-learning, fastapi, lstm, machine-learning, price-prediction, python, pytorch, technical-analysis, time-series-forecasting, websocket, yfinance
+
+### crypto-price-prediction-api
+
+v1 of CryptoAion: FastAPI service forecasting Bitcoin, Ethereum & altcoin prices with a PyTorch BiLSTM + attention model, CoinGecko and Yahoo Finance data, plus BiLSTM and XGBoost research notebooks.
+
+- Repository: https://github.com/intikhab49/crypto-price-prediction-api
+- Language: Jupyter Notebook
+- Topics: bilstm, bitcoin, coingecko-api, cryptocurrency, deep-learning, fastapi, jupyter-notebook, lstm, machine-learning, price-prediction, python, pytorch, time-series-forecasting, xgboost, yfinance
+- Stars: 2
+
+
+## DevOps and full-stack
+
+### kubernetes-flask-microservices
+
+Flask microservices on Kubernetes (Minikube + Flannel) and Docker Swarm: NGINX reverse proxy, PostgreSQL, logging service, Prometheus monitoring and NetworkPolicies — a hands-on DevOps project.
+
+- Repository: https://github.com/intikhab49/kubernetes-flask-microservices
+- Language: Python
+- Topics: devops, docker, docker-swarm, flannel, flask, kubernetes, microservices, minikube, monitoring, network-policy, nginx, postgresql, prometheus, python, rest-api
+- Stars: 1
+
+### kubernetes-flask-crud
+
+Flask + PostgreSQL CRUD app deployed on Kubernetes (Minikube) behind an NGINX reverse proxy with NetworkPolicies, plus a Docker Swarm stack.
+
+- Repository: https://github.com/intikhab49/kubernetes-flask-crud
+- Language: Python
+- Topics: crud, devops, docker, docker-swarm, flask, gunicorn, kubernetes, minikube, network-policy, nginx, postgresql, python
+
+### flask-postgres-crud-dashboard
+
+Flask + PostgreSQL user management CRUD app with a Bootstrap dark UI, Chart.js dashboard and REST API — runs with Docker Compose.
+
+- Repository: https://github.com/intikhab49/flask-postgres-crud-dashboard
+- Language: Python
+- Topics: bootstrap, chartjs, crud, crud-application, dashboard, docker-compose, flask, postgresql, python, rest-api, sqlalchemy, user-management
+
+### react-express-drizzle-crud
+
+Full-stack TypeScript CRUD app: React + Vite, Express, Drizzle ORM, Neon Postgres, Passport session auth with scrypt hashing and a Postgres session store.
+
+- Repository: https://github.com/intikhab49/react-express-drizzle-crud
+- Language: TypeScript
+- Topics: authentication, crud, drizzle-orm, express, fullstack, neon, passport, postgresql, react, tailwindcss, tanstack-query, typescript, vite, zod
+
+### devops-agency-website
+
+DevOps & cloud services agency website: React + TypeScript landing page with Tailwind & shadcn/ui — services, pricing calculator, testimonials, blog, FAQ, live chat — and an Express contact/newsletter API.
+
+- Repository: https://github.com/intikhab49/devops-agency-website
+- Language: TypeScript
+- Topics: agency-website, devops, drizzle-orm, express, landing-page, react, shadcn-ui, tailwindcss, typescript, vite, website-template
+
+### ubuntu-dev-tools-installer
+
+Interactive Bash script to install or update Python, VS Code, Docker, Jenkins and kubectl on Ubuntu — detects installed versions and asks before changing anything.
+
+- Repository: https://github.com/intikhab49/ubuntu-dev-tools-installer
+- Language: Shell
+- Topics: automation, bash, bash-script, developer-tools, devops, docker, installer, jenkins, kubectl, linux, python, ubuntu, vscode
+
+### libncurses5-libaio1-ubuntu-deb
+
+libaio1, libncurses5, libncurses5-dev & libtinfo5 .deb packages (amd64) — fix 'libncurses.so.5 / libtinfo.so.5 / libaio.so.1: cannot open shared object file' on newer Ubuntu.
+
+- Repository: https://github.com/intikhab49/libncurses5-libaio1-ubuntu-deb
+- Topics: deb, debian, dependencies, dpkg, legacy, libaio, libncurses5, libtinfo5, linux, ubuntu
+- Stars: 1
+
+### git-notes
+
+Working notes on git internals and GitHub Actions
+
+- Repository: https://github.com/intikhab49/git-notes
+- Topics: devops, git, git-internals, github-actions, notes
+
+### cpp-queue-data-structure
+
+Array-based FIFO queue in C++ with enqueue, dequeue, size and display — a data structures coursework exercise.
+
+- Repository: https://github.com/intikhab49/cpp-queue-data-structure
+- Language: C++
+- Topics: algorithms, cpp, data-structures, dsa, queue

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://intikhab49.github.io/sitemap.xml
+Sitemap: https://intikhab49.github.io/fairfax/sitemap.xml
+Sitemap: https://intikhab49.github.io/blueprint-runtime/sitemap.xml
+Sitemap: https://intikhab49.github.io/pgvector-cpu-check/sitemap.xml
