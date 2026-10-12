@@ -81,8 +81,8 @@ PROOF = {
     "pushback": "On PyPI, with tests in CI.",
 }
 
-# Public repos left off the page: an older duplicate of edgeproof-crypto-trading-backtest.
-SKIP = {USER, f"{USER}.github.io", "crypto-15m-edge-research"}
+# Public repos left off the page: the profile README repo and this site's own repo.
+SKIP = {USER, f"{USER}.github.io"}
 
 # Painted cards from the profile README (assets/cards), shown as a gallery.
 CARDS = [("open-jev-typed-decision-engine", "open-jev"), ("pushback", "pushback"), ("diff-gate", "diff-gate"),
