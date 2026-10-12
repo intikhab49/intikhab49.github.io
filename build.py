@@ -84,11 +84,10 @@ PROOF = {
 # Public repos left off the page: the profile README repo and this site's own repo.
 SKIP = {USER, f"{USER}.github.io"}
 
-# Painted cards from the profile README (assets/cards), shown as a gallery.
-CARDS = [("open-jev-typed-decision-engine", "open-jev"), ("pushback", "pushback"), ("diff-gate", "diff-gate"),
-         ("rag-cost-curve", "rag-cost-curve"), ("minio-from-source", "minio-from-source"),
-         ("vapi-voice-agent-crm", "voice-agent-crm"), ("edgeproof-crypto-trading-backtest", "edgeproof"),
-         ("local-business-lead-finder", "lead-finder")]
+# Constellation cards from the profile README (assets/cards), shown as a gallery.
+CARDS = [("fairfax", "fairfax"), ("blueprint-runtime", "blueprint-runtime"), ("pgvector-cpu-check", "pgvector-cpu-check"),
+         ("diff-gate", "diff-gate"), ("lifeboat", "lifeboat"), ("open-jev-typed-decision-engine", "open-jev"),
+         ("rag-cost-curve", "rag-cost-curve"), ("vapi-voice-agent-crm", "voice-agent-crm")]
 
 BUILD = [
     ("AI voice agents", "Vapi and Twilio receptionists and outbound callers, wired into CRMs, payments and SMS."),
@@ -200,7 +199,7 @@ def main():
         {"@type": "ItemList", "name": f"Open-source projects by {NAME}",
          "itemListElement": [{"@type": "ListItem", "position": i + 1, "item": x} for i, x in enumerate(item_list)]}]}
 
-    gallery = "".join(f'<a href="{GH}/{repo}"><img src="assets/cards/{art}.svg" width="640" height="400" loading="lazy" '
+    gallery = "".join(f'<a href="{GH}/{repo}"><img src="assets/cards/{art}.svg" width="640" height="360" loading="lazy" '
                       f'alt="{e(data[repo]["name"])}: {e(data[repo]["description"] or "")}"></a>'
                       for repo, art in CARDS if repo in data)
     li = lambda rows: "".join(f"<li><b>{e(a)}</b>: {e(b)}</li>" for a, b in rows)
@@ -226,29 +225,28 @@ def main():
 <meta property="profile:first_name" content="Intikhab"><meta property="profile:last_name" content="Azam">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@AzamIntikhab">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
 <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
 <style>
-:root{{--night:#0d0b16;--panel:#17132a;--cream:#f6e7c1;--paper:#fbf3dc;--red:#e0262b;--saffron:#ffb400;--gold:#f2c14e;
---green:#1fa34a;--teal:#16b3c4;--pink:#ff3e8a;--blue:#1f4fd8;--muted:#cbbf9f}}
+:root{{--night:#070a1c;--panel:#10153a;--cream:#f4ead2;--paper:#f8f1de;--red:#c46a6a;--saffron:#e8c98e;--gold:#e8c98e;
+--green:#7fc8a9;--teal:#7fd0d0;--pink:#e7a2b8;--blue:#8fa8e8;--muted:#a9b3d4}}
 *{{box-sizing:border-box}}
 html{{background:var(--night)}}
 body{{margin:0;color:var(--cream);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--night)}}
 a{{color:var(--saffron)}} a:hover{{color:var(--pink)}}
 .wrap{{max-width:1120px;margin:0 auto;padding:0 16px}}
 .hero img{{display:block;width:100%;height:auto}}
-.tape{{height:10px;background:repeating-linear-gradient(90deg,var(--red) 0 28px,var(--paper) 28px 56px,var(--green) 56px 84px,var(--saffron) 84px 112px)}}
-h1{{font-family:Ultra,Georgia,serif;font-weight:400;font-size:clamp(28px,4.6vw,48px);line-height:1.15;margin:28px 0 6px;color:var(--paper)}}
+h1{{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;font-size:clamp(28px,4.6vw,48px);line-height:1.15;margin:28px 0 6px;color:var(--paper)}}
 h1 .urdu{{display:block;font-family:"Noto Nastaliq Urdu","Jameel Noori Nastaleeq",serif;font-size:.6em;color:var(--gold);margin-top:6px}}
 .role{{font-size:clamp(17px,2.2vw,21px);color:var(--gold);margin:0 0 14px;font-weight:600}}
 .chips{{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0 0 18px;list-style:none}}
 .chips li{{border:2px solid var(--saffron);border-radius:999px;padding:3px 12px;font-size:14px;font-weight:600}}
 .chips li:nth-child(3n+2){{border-color:var(--pink)}} .chips li:nth-child(3n){{border-color:var(--teal)}}
-.cta{{display:inline-block;background:var(--red);color:var(--paper);font-weight:700;padding:10px 18px;border-radius:8px;
-text-decoration:none;border:3px solid var(--saffron);margin:4px 8px 4px 0}} .cta.alt{{background:transparent}}
-.cta:hover{{color:var(--paper);background:var(--pink)}}
-h2{{font-family:Ultra,Georgia,serif;font-weight:400;color:var(--saffron);font-size:clamp(24px,3.4vw,34px);margin:52px 0 12px}}
-h2::after{{content:"";display:block;width:120px;height:6px;margin-top:8px;background:linear-gradient(90deg,var(--red),var(--saffron),var(--green),var(--teal))}}
+.cta{{display:inline-block;background:#1c2350;color:var(--paper);font-weight:700;padding:10px 18px;border-radius:8px;
+text-decoration:none;border:2px solid var(--gold);margin:4px 8px 4px 0}} .cta.alt{{background:transparent}}
+.cta:hover{{color:var(--night);background:var(--gold)}}
+h2{{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;color:var(--cream);font-size:clamp(24px,3.4vw,34px);margin:52px 0 12px}}
+h2::after{{content:"";display:block;width:120px;height:6px;margin-top:8px;background:linear-gradient(90deg,var(--gold),var(--pink),transparent)}}
 ul.plain{{padding-left:20px}} ul.plain li{{margin:6px 0}} b{{color:var(--paper)}}
 .group{{margin:30px 0}} .gh{{font-size:21px;margin:0;color:var(--paper)}} .sub{{margin:2px 0 14px;color:var(--muted)}}
 .grid{{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}}
@@ -270,8 +268,7 @@ footer{{margin:60px 0 0;padding:24px 0 40px;border-top:2px solid #2c2550;color:v
 </style>
 </head>
 <body>
-<div class="tape"></div>
-<header class="hero"><img src="assets/hero.svg" width="1280" height="914" alt="{NAME}, AI/ML engineer, researcher and systems architect, painted in Pakistani truck art: two peacocks, a vase of roses and his name in Urdu and English."></header>
+<header class="hero"><img src="assets/hero.svg" width="1280" height="760" alt="{NAME}, AI/ML engineer, researcher and systems architect. A painted night: the Milky Way rising over a mountain lake, and someone on a rock at the shore looking up at it through a small telescope."></header>
 <main class="wrap">
 <h1>{NAME}<span class="urdu" lang="ur" dir="rtl">{URDU}</span></h1>
 <p class="role">AI/ML Engineer, Researcher &amp; Systems Architect</p>
@@ -286,8 +283,8 @@ footer{{margin:60px 0 0;padding:24px 0 40px;border-top:2px solid #2c2550;color:v
 <p>{tools} public repositories, grouped by what they are for, newest work first. Descriptions come straight from each repository; the green line under a tool is something you can check.</p>
 {"".join(groups_html)}
 
-<h2 id="gallery">From the truck</h2>
-<p>Every project card on my GitHub profile is hand-coded, animated SVG in the style of Pakistani truck art.</p>
+<h2 id="gallery">Constellations</h2>
+<p>Each project drawn as a constellation in its own painted nebula. Every image here is painted by code: a soft field of light, repainted with tens of thousands of brush strokes. No stock art, no image generator.</p>
 <div class="gallery">{gallery}</div>
 
 <h2 id="architecture">System architecture</h2>
@@ -302,7 +299,6 @@ footer{{margin:60px 0 0;padding:24px 0 40px;border-top:2px solid #2c2550;color:v
 <footer><div class="wrap">
 <p>{NAME} ({URDU}) · <a href="{GH}">GitHub</a> · <a href="{X}">X</a> · <a href="llms.txt">llms.txt</a> · Updated {dt.date.today().isoformat()}</p>
 <p>AI engineer · machine learning engineer · LLM engineer · AI researcher · systems architect · voice AI agent developer · RAG · LLM evaluation · Claude Code · MCP · multi-tenant SaaS · GCC High · Azure Government · Make.com · PostgreSQL · remote AI engineer in Pakistan</p>
-<p><b>Dekh magar pyar se</b>: look, but with love.</p>
 </div></footer>
 </body>
 </html>
