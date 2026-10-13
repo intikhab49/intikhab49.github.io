@@ -92,6 +92,7 @@ def main():
         raise SystemExit(f"featured projects not found as public repos: {missing}")
     also = sorted((n for n in data if n not in featured and n not in SKIP), key=lambda n: (data[n]["archived"], n))
     today = dt.date.today().isoformat()
+    built = dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat()  # ProfilePage wants a full datetime
 
     person = {"@type": "Person", "@id": SITE + "#person", "name": NAME, "alternateName": "انتخاب اعظم",
               "jobTitle": "AI/ML Engineer, Researcher & Systems Architect", "description": DESC, "url": SITE,
@@ -105,7 +106,7 @@ def main():
               "description": c["built"], "author": {"@id": SITE + "#person"}} for c in C.CASES]
     ld = {"@context": "https://schema.org", "@graph": [
         {"@type": "ProfilePage", "@id": SITE, "url": SITE, "name": TITLE, "description": DESC, "inLanguage": "en",
-         "dateModified": today, "mainEntity": {"@id": SITE + "#person"}},
+         "dateModified": built, "mainEntity": {"@id": SITE + "#person"}},
         person,
         {"@type": "ItemList", "name": "Client work by " + NAME,
          "itemListElement": [{"@type": "ListItem", "position": i + 1, "item": c} for i, c in enumerate(cases)]},
