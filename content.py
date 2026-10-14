@@ -67,6 +67,10 @@ PROJECTS = [
      "Is it available in GCC High? Checks a Microsoft 365 GCC, GCC High or DoD and Azure Government plan against "
      "Microsoft’s own tables, and finds commercial endpoints in code.",
      "633 features, every row cited · weekly re-check with Wayback copies", "Website", SITE + "fairfax/"),
+    ("starsift", "tools", "Security", "Python", "starsift", "github stars fake stars star farm stargazers gh archive pypi",
+     "Are a repo’s GitHub stars real? Compares the accounts behind them with random accounts from the same hours, "
+     "now that GitHub hides who starred.",
+     "21 of 25 suspected fake-star repos flagged, 0 of 25 others · on PyPI", "PyPI", "https://pypi.org/project/starsift/"),
     ("blueprint-runtime", "tools", "Automation", "TypeScript", "blueprint-runtime", "make.com integromat no-code testing ci npm",
      "Test Make.com scenarios offline. Replays real Make runs locally so a broken mapping fails in CI, not in production.",
      "71 of 79 real runs reproduced exactly, 0 differ", "Website", SITE + "blueprint-runtime/"),
@@ -182,7 +186,8 @@ STACK = [
         ("Cloudflare Pages", "Hosting", "the billing-services company website"),
         ("Playwright", "E2E tests", "the multi-tenant platform, on every pull request"),
         ("Slack + Notion", "Workflow", "the Slack triage system"),
-        ("QEMU", "CPU emulation", "pgvector-cpu-check, 7 CPU models")]),
+        ("QEMU", "CPU emulation", "pgvector-cpu-check, 7 CPU models"),
+        ("ClickHouse", "Analytics SQL", "starsift, which samples a public archive of 11 billion GitHub events")]),
 ]
 
 SERVICES = [
